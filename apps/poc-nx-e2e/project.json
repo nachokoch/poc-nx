@@ -1,0 +1,28 @@
+{
+  "root": "apps/poc-nx-e2e",
+  "sourceRoot": "apps/poc-nx-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/poc-nx-e2e/cypress.json",
+        "devServerTarget": "poc-nx:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "poc-nx:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/poc-nx-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["poc-nx"]
+}

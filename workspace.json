@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "poc-nx": "apps/poc-nx",
+    "poc-nx-e2e": "apps/poc-nx-e2e"
+  }
+}
